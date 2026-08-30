@@ -9,5 +9,5 @@ Personal portfolio built with [Next.js](https://nextjs.org/) and hosted on [Verc
 
 ## Running Locally
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
