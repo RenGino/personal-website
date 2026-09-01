@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
+import Sidebar from './components/sidebar'
 import { Analytics } from '@vercel/analytics/react'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
@@ -10,15 +11,15 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Renato Torres Next.js Portfolio',
+    template: '%s | Renato Torres Next.js Portfolio',
   },
-  description: 'This is my portfolio.',
+  description: 'Renato Torres\' portfolio.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Renato Torres Next.js Portfolio',
+    description: 'This is Renato Torres\' portfolio.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Renato Torres Next.js Portfolio',
     locale: 'en_US',
     type: 'website',
   },
@@ -51,14 +52,31 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
+      <body className="bg-white text-black dark:bg-neutral-900 dark:text-white">
+        <div className="relative min-h-screen w-full md:h-screen md:overflow-y-auto">
+          <div className="mx-auto max-w-6xl px-6 pt-[5%] md:flex md:gap-12 md:pb-12">
+            <aside className="w-full shrink-0 md:w-48">
+              <Sidebar />
+            </aside>
+            <main className="flex-1">
+              <section className="w-full max-w-2xl">
+                {children}
+                <Footer />
+                <Analytics />
+              </section>
+            </main>
+          </div>
+        </div>
+      </body>
+
+      {/* <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
           <Footer />
           <Analytics />
         </main>
-      </body>
+      </body> */}
     </html>
   )
 }
