@@ -1,3 +1,4 @@
+// DELETE THIS FILE, IT IS NOT USED ANYMORE
 import Link from 'next/link'
 
 const navItems = {
@@ -7,9 +8,6 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  // 'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-  //   name: 'deploy',
-  // },
 }
 
 export function Navbar() {

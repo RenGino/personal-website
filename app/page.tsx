@@ -1,4 +1,3 @@
-import { BlogPosts } from '@/app/components/posts'
 import TypingHeader from './components/typingHeader'
 import Image from 'next/image';
 
@@ -32,8 +31,19 @@ export default function Page() {
         new technologies. I'm looking for opportunities to grow as a developer while 
         contributing to creative and challenging projects.
       </p>
-      <div className="my-8">
+      {/* <div className="my-8">
         <BlogPosts />
+      </div> */}
+      <div className="mt-8 pl-8">
+        <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
+          Currently
+        </h3>
+        <ul className="mt-2 list-disc list-inside space-y-1.5 text-sm text-neutral-600 dark:text-neutral-400">
+          <li>Seeking software engineering, developer, test automation, or creative tech roles</li>
+          <li>Deepening data structure & system performance knowledge</li>
+          <li>Experimenting between technology, visual art, and sound</li>
+          <li>Building interactive web experiences</li>
+        </ul>
       </div>
     </section>
   )

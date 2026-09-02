@@ -5,7 +5,7 @@ Personal portfolio built with [Next.js](https://nextjs.org/) and hosted on [Verc
 ## Features
 - **Framework:** Next.js (App Router)
 - **Styling:** Tailwind CSS
-- **Blog:** MDX content support
+- **Dev Posts:** MDX content support
 
 ## Running Locally
 ```bash
