@@ -12,7 +12,7 @@ export default function Page() {
           height={128}
           className="rounded-full object-cover shrink-0"
         />
-        <h1 className="text-4xl font-semibold tracking-tighter">
+        <h1 className="text-3xl font-semibold tracking-tighter">
           Renato Torres is a:
         </h1>
       </div>

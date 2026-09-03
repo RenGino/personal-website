@@ -8,16 +8,20 @@ export const metadata = {
 export default function Page() {
   const skills = [
     {
+      category: 'Core Competencies',
+      items: ['Software Engineering', 'Web Development', 'Game Development', 'Software Testing'],
+    },
+    {
       category: 'Languages',
-      items: ['C++', 'C#','Python', 'JavaScript', 'Dart', 'Kotlin', 'MATLAB', 'SysML'],
+      items: ['C++', 'C#','Python', 'JavaScript', 'TypeScript', 'Dart', 'Kotlin', 'MATLAB', 'SysML'],
     },
     {
       category: 'Frameworks & Libraries',
-      items: ['React', 'Next.js', 'Flutter', 'Unity', 'OpenGL', 'Isar (NoSQL)'],
+      items: ['React', 'Next.js', 'Tailwind CSS', 'Flutter', 'Unity', 'OpenGL', 'Isar (NoSQL)'],
     },
     {
       category: 'Tools & Platforms',
-      items: ['Git', 'Jira', 'Android Studio', 'TestComplete', 'Microsoft Power Platform', 'Blender', 'Adobe Creative Suite'],
+      items: ['Git', 'Supabase', 'PostgreSQL', 'Jira', 'Android Studio', 'TestComplete', 'Microsoft Power Platform', 'Blender', 'Adobe Creative Suite'],
     },
   ]
   return (

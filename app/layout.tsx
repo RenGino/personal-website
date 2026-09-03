@@ -7,6 +7,7 @@ import Sidebar from './components/sidebar'
 import { Analytics } from '@vercel/analytics/react'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import { ThemeProvider } from 'next-themes'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -51,32 +52,26 @@ export default function RootLayout({
         GeistSans.variable,
         GeistMono.variable
       )}
+      suppressHydrationWarning
     >
       <body className="bg-white text-black dark:bg-neutral-900 dark:text-white">
-        <div className="relative min-h-screen w-full md:h-screen md:overflow-y-auto">
-          <div className="mx-auto max-w-6xl px-6 pt-[5%] md:flex md:gap-12 md:pb-12">
-            <aside className="w-full shrink-0 md:w-48">
-              <Sidebar />
-            </aside>
-            <main className="flex-1">
-              <section className="w-full max-w-2xl">
-                {children}
-                <Footer />
-                <Analytics />
-              </section>
-            </main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="relative min-h-screen w-full md:h-screen md:overflow-y-auto scrollbar-gutter-stable">
+            <div className="mx-auto max-w-6xl px-6 pt-[5%] md:flex md:gap-12 md:pb-12">
+              <aside className="w-full shrink-0 md:w-48">
+                <Sidebar />
+              </aside>
+              <main className="flex-1">
+                <section className="w-full max-w-2xl">
+                  {children}
+                  <Footer />
+                  <Analytics />
+                </section>
+              </main>
+            </div>
           </div>
-        </div>
+        </ThemeProvider>
       </body>
-
-      {/* <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
-          <Analytics />
-        </main>
-      </body> */}
     </html>
   )
 }

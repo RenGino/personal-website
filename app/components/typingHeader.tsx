@@ -12,7 +12,7 @@ const typingStrings = [
 export default function TypingHeader() {
   return (
     <ReactTyped 
-      className="font-mono text-3xl text-navy overflow-hidden text-start" 
+      className="font-mono text-2xl text-navy overflow-hidden text-start" 
       typeSpeed={30}
       backDelay={1500} 
       backSpeed={15} 
