@@ -97,7 +97,7 @@ export default function CustomMusicPlayer() {
 				className="hidden"
 			/>
 
-			<div className="px-4 py-3 bg-neutral-50 dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-800 text-sm font-mono font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+			<div className="px-4 py-3 bg-neutral-50 dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-800 text-sm font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
 				Audio Showcase
 			</div>
 
