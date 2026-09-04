@@ -2,7 +2,6 @@ import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Navbar } from './components/nav'
 import Sidebar from './components/sidebar'
 import { Analytics } from '@vercel/analytics/react'
 import Footer from './components/footer'
@@ -12,17 +11,25 @@ import { ThemeProvider } from 'next-themes'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Renato Torres Next.js Portfolio',
-    template: '%s | Renato Torres Next.js Portfolio',
+    default: 'Renato Torres Website',
+    template: '%s | Renato Torres Website',
   },
   description: 'Renato Torres\' portfolio.',
   openGraph: {
-    title: 'Renato Torres Next.js Portfolio',
+    title: 'Renato Torres Website',
     description: 'This is Renato Torres\' portfolio.',
     url: baseUrl,
-    siteName: 'Renato Torres Next.js Portfolio',
+    siteName: 'Renato Torres',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/pfp.png',
+        width: 128,
+        height: 128,
+        alt: 'Profile Art',
+      },
+    ],
   },
   robots: {
     index: true,

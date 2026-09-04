@@ -7,16 +7,17 @@ export default function Home() {
   const [clicks, setClicks] = useState<number>(0);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isCooldown, setIsCooldown] = useState<boolean>(false);
+  const [isShaking, setIsShaking] = useState(false);
   const [catMessage, setCatMessage] = useState("Clicking this would make my day!");
   const messages = [
     "Ughhhh",
     "I can start to escape at one quattuorvigintillion clicks",
-    "One quattuorvigintillion... One quattuorvigintillion...",
+    "One quattuorvigintillion clicks...",
     "Clicking this helps me get out of here",
     "Please click this...\ndo it for me...",
     "C'monnnn keep clicking",
-    "Click click click CLICK CLICK CLICK CLICK CLICK CLICK CLICK",
-    "Clicking this means so much to me...",
+    "Click click click click click click click click click click",
+    "One quattuorvigintillion clicks will push me out...",
     "Being in this box sucks, please click this",
   ];
 
@@ -57,6 +58,7 @@ export default function Home() {
     if (isCooldown) return;
     setIsCooldown(true);
 
+    setIsShaking(true);
     const availableMessages = messages.filter(msg => msg !== catMessage);  
     const randomMsg = availableMessages[Math.floor(Math.random() * availableMessages.length)];
     setCatMessage(randomMsg);
@@ -98,7 +100,7 @@ export default function Home() {
           <button 
             onClick={handleClick}
             disabled={isCooldown}
-            className={`w-32 py-2.5 font-medium rounded-lg flex items-center justify-center disabled:opacity-70 transition-colors ${
+            className={`w-32 py-2.5 font-medium rounded-lg flex items-center justify-center disabled:opacity-70 transition-colors cursor-pointer ${
               isCooldown 
                 ? 'bg-neutral-200 text-neutral-400 dark:bg-neutral-400 dark:text-neutral-600' 
                 : 'bg-black/90 text-white hover:bg-neutral-800 active:scale-95'
@@ -109,16 +111,32 @@ export default function Home() {
         </div>
 
         {/* Cat */}
+        <style jsx>{`
+          @keyframes shake {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            20% { transform: translateX(-4px) rotate(-3deg); }
+            40% { transform: translateX(4px) rotate(3deg); }
+            60% { transform: translateX(-3px) rotate(-1deg); }
+            80% { transform: translateX(3px) rotate(1deg); }
+          }
+          .animate-shake {
+            animation: shake 0.4s ease-in-out;
+          }
+        `}</style>
+        
         <div className="flex flex-col items-center relative">
           <div className="relative w-50 min-h-14 flex items-center justify-center bg-white dark:bg-neutral-700 border border-yellow-200 dark:border-yellow-400/50 px-3 py-2 rounded-xl shadow-sm text-xs font-medium text-neutral-700 dark:text-neutral-200 text-center mb-2 whitespace-pre-line">
-            {catMessage}
+            {isLoading ? "It's loading!" : catMessage}
             <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white dark:bg-neutral-700 border-r border-b border-yellow-200 dark:border-yellow-400/50 rotate-45"></div>
           </div>
 
           <img 
             src="/cat_v4.png" 
             alt="Cat" 
-            className="w-36 h-auto object-contain select-none pointer-events-none"
+            onAnimationEnd={() => setIsShaking(false)}
+            className={`w-36 h-auto object-contain select-none transition-transform ${
+              isShaking ? 'animate-shake' : ''
+            }`}
           />
         </div>
 

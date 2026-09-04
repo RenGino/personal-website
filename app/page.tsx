@@ -16,7 +16,7 @@ export default function Page() {
           Renato Torres is a:
         </h1>
       </div>
-      <div className="mb-8 w-max">
+      <div className="mb-8 w-full">
         <TypingHeader />
       </div>
       

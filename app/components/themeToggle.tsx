@@ -15,11 +15,10 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="self-center md:fixed md:top-6 md:right-6 z-50 flex items-center justify-center h-8 w-8 rounded-md bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 transition-colors cursor-pointer"
+      className="self-center md:fixed md:top-6 md:right-6 z-50 flex items-center justify-center h-8 w-8 rounded-md bg-neutral-200 dark:bg-neutral-800 text-yellow-500 dark:text-yellow-300 transition-colors cursor-pointer"
       aria-label="Toggle Theme"
     >
       
-      {/* {resolvedTheme === 'dark' ? 'light' : 'dark'} */}
       {resolvedTheme === 'dark' ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
