@@ -64,12 +64,12 @@ export default function RootLayout({
       <body className="bg-white text-black dark:bg-neutral-900 dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative min-h-screen w-full md:h-screen md:overflow-y-auto scrollbar-gutter-stable">
-            <div className="mx-auto max-w-6xl px-6 pt-[5%] md:flex md:gap-12 md:pb-12">
-              <aside className="w-full shrink-0 md:w-48">
+            <div className="mx-auto max-w-4xl px-6 pt-[5%] flex flex-col gap-8 md:flex-row md:justify-start md:gap-10 md:pb-12">
+              <aside className="w-full shrink-0 md:w-36 md:pt-4 md:-ml-6">
                 <Sidebar />
               </aside>
-              <main className="flex-1">
-                <section className="w-full max-w-2xl">
+              <main className="w-full max-w-2xl">
+                <section className="w-full">
                   {children}
                   <Footer />
                   <Analytics />

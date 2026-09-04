@@ -18,22 +18,21 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-full p-6 pr-2 md:w-36 md:pr-0">
-      <div className="flex flex-col gap-3">
-        <div className="flex justify-center md:justify-start">
-          <span className="block h-0.5 w-30 rounded-full bg-neutral-900 transition-colors dark:bg-white" />
-        </div>
+    <div className="w-full">
+      <div className="flex justify-center mb-3 md:mb-0 md:justify-start">
         <ThemeToggle />
-        <nav className="flex flex-row flex-wrap justify-center md:flex-col md:flex-nowrap md:justify-start w-full gap-2 md:gap-0.5 items-center md:items-start pb-2 md:pb-0">
+      </div>
+
+      <div className="flex flex-col gap-3 md:-translate-x-6">
+        <span className="mx-auto md:mx-0 block h-0.5 w-32 rounded-full bg-neutral-900 transition-colors dark:bg-white" />
+        <nav className="flex flex-row flex-wrap justify-center w-full gap-2 md:flex-col md:justify-start md:gap-0.5 items-center md:items-start font-mono">
           {navItems.map((item) => {
             const isActive = pathname === item.path;
             return (
               <LinkComponent
                 key={item.path}
                 href={item.path}
-                // `...` lets you treat block as a string and also evaluate code inside
-                // ${...} treats block as JavaScript
-                className={`relative px-2 py-1 text-base transition-colors ${
+                className={`relative px-2 py-1 text-base whitespace-nowrap transition-colors ${
                   isActive
                     ? 'text-black dark:text-white font-medium'
                     : 'text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white'
@@ -50,10 +49,8 @@ export default function Sidebar() {
               </LinkComponent>
             );
           })}
-          <div className="mt-8">
-          </div>
         </nav>
       </div>
-    </aside>
+    </div>
   );
 }
