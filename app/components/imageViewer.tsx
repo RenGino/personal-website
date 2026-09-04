@@ -15,7 +15,7 @@ const mediaItems = [
     type: 'video',
     src: 'art/rainsign.mp4',
     title: 'Rign Sign',
-    description: 'A spooky animation created using Blender and photos taken in a hallway. I thought it was goofy how they put a wet floor sign inside the building lol.',
+    description: 'A spooky animation created using Blender and photos taken in a hallway. I thought it looked really ominous yet goofy lol.',
   },
   {
     id: 3,
