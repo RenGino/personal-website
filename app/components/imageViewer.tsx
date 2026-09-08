@@ -7,15 +7,15 @@ const mediaItems = [
     id: 1,
     type: 'image',
     src: 'art/lighthouse_v2.png',
-    title: 'Lighthouse Artwork',
-    description: 'I really like lighthouses and coastal aesthetics. I drew this back in 2018 using a permanent marker.',
+    title: 'Lighthouse',
+    description: 'I’ve always enjoyed coastal themes and lighthouses. I created this permanent marker illustration in 2018.',
   },
   {
     id: 2,
     type: 'video',
     src: 'art/rainsign.mp4',
     title: 'Rign Sign',
-    description: 'A spooky animation created using Blender and photos taken in a hallway. I thought it looked really ominous yet goofy lol.',
+    description: 'A spooky 3D animation created in Blender using an original hallway photo. The initial photo felt a bit goofy and I decided to turn it into something eerie.',
   },
   {
     id: 3,
@@ -28,15 +28,15 @@ const mediaItems = [
     id: 4,
     type: 'image',
     src: 'art/cat_v2.png',
-    title: 'Cat Artwork',
+    title: 'Boxed Cat',
     description: "Part of a short comic series inspired by Schrödinger's cat.",
   },
   {
     id: 5,
     type: 'image',
     src: 'art/toilet_v2.png',
-    title: 'Toilet Artwork',
-    description: "On da boat in Hawaii lol.",
+    title: 'On a Boat',
+    description: "Photo from a boat in Hawaii with a character added."
   },
 ];
 
