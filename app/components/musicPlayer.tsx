@@ -10,7 +10,6 @@ const tracks = [
   { id: 5, title: 'Project_53', src: '/audio/Project_53v1.mp3' },
   { id: 6, title: 'Bad Pokerface', src: '/audio/bad_pokerface_demo.mp3' },
   { id: 7, title: 'Time of Day', src: '/audio/time_of_day_demo.mp3' },
-  { id: 8, title: 'Brag About These Things', src: '/audio/brag_about_these_things_demo.mp3' },
 ];
 
 export default function CustomMusicPlayer() {
