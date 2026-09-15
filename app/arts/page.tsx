@@ -1,7 +1,12 @@
 import CustomImageViewer from '../components/imageViewer';
 import CustomMusicPlayer from '../components/musicPlayer';
+import type { Metadata } from 'next'
 
-export default function Page() {
+export const metadata: Metadata = {
+  title: 'Art Showcase',
+};
+
+export default function ArtShowcase() {
   return (
       <div className="flex flex-col gap-6 max-w-2xl">
         <div className="flex flex-col gap-2">

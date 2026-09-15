@@ -11,12 +11,12 @@ import { ThemeProvider } from 'next-themes'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Renato Torres Website',
-    template: '%s | Renato Torres Website',
+    default: 'Renato Torres',
+    template: '%s | Renato Torres',
   },
   description: 'Renato Torres\' portfolio.',
   openGraph: {
-    title: 'Renato Torres Website',
+    title: 'Renato Torres',
     description: 'This is Renato Torres\' portfolio.',
     url: baseUrl,
     siteName: 'Renato Torres',
